@@ -5,6 +5,7 @@
   "main": "dist/finka.js",
   "types": "types/index.d.ts",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "rollup -c",
     "test": "npx mocha --file test/_init.js --recursive test",
     "docs": "jsdoc -c jsdoc.json",
@@ -43,6 +44,11 @@
     "url": "https://github.com/bitbar/finka-js/issues"
   },
   "homepage": "https://github.com/bitbar/finka-js#readme",
+  "resolutions": {
+    "nth-check": "2.0.1",
+    "postcss": "8.2.13",
+    "sanitize-html": "2.3.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
@@ -55,7 +61,7 @@
     "husky": "^4.3.8",
     "jsdoc": "^3.6.10",
     "jsdoc-rtd": "^1.0.15",
-    "mocha": "^8.4.0",
+    "mocha": "^9.2.0",
     "rollup": "^2.56.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^7.0.2"
